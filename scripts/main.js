@@ -1,7 +1,6 @@
 require('dotenv').config();
 const starknet = require("starknet");
 const ERC20 = require("../contracts/ERC20.json");
-// Logging and counting object
 const operationCounts = {
     totalCalls: 0,
     success: {
@@ -40,11 +39,9 @@ const argentCairo1ClassHash = "0x01a736d6ed154502257f02b1ccdf4d9d1089f80811cd6ac
 async function getTransaction(txnHash) {
     try {
         const result = await provider.getTransactionReceipt(txnHash);
-        //console.log("This is the transaction receipt - ", result);
-        logOperation('getTransaction', true); // Log success
+        logOperation('getTransaction', true);
     } catch (error) {
-        //console.error("Failed to get transaction receipt:", error);
-        logOperation('getTransaction', false); // Log failure
+        logOperation('getTransaction', false);
     }
 }
 
@@ -95,7 +92,6 @@ async function deploy() {
             0,
         );
         console.log('Precalculated account address = ', contractAddress);
-        //Fund
         const contract = new starknet.Contract(ERC20.abi, feeAddress, provider);
         contract.connect(account);
 
