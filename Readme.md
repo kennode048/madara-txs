@@ -1,6 +1,6 @@
 ## Installation
 
-Install my-project with npm
+Install with npm
 
 ```bash
 # latest official release (main branch)
