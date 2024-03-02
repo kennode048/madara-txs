@@ -2,6 +2,7 @@
   "name": "madara-txs",
   "version": "1.0.0",
   "author": "KenNode",
+  "description": "Madara txs",
   "homepage": "https://github.com/kennode048/madara-txs#readme",
   "license": "MIT",
   "main": "index.js",
@@ -12,6 +13,10 @@
     "type": "git",
     "url": "https://github.com/kennode048/madara-txs"
   },
+  "keywords": [
+    "madara",
+    "tx"
+  ],
   "dependencies": {
     "axios": "^1.6.7",
     "dotenv": "^16.4.2",
